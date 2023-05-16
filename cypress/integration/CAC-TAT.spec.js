@@ -183,11 +183,11 @@ describe('Curso Cypress Básico', function() {
                 })
         })
 
-        it('Verifica que a politica de privacidade abre em outra aba sem a necessidade de um clique', function(){
+        it.only('Verifica que a politica de privacidade abre em outra aba sem a necessidade de um clique', function(){
             cy.get('#privacy a').should('have.attr', 'target', '_blank')    
         })
 
-        it('acessa a página da política de privacidade removendo o target e então clicando no link', function(){
+        it.only('acessa a página da política de privacidade removendo o target e então clicando no link', function(){
             cy.get('#privacy a')
             .invoke('removeAttr', 'target')
             .click()
@@ -229,7 +229,7 @@ describe('Curso Cypress Básico', function() {
                 })
           })
 
-          it.only('Desafio - Encontre o Gato', function(){
+          it('Desafio - Encontre o Gato', function(){
             cy.get('#cat')
             .invoke('show')
             .should('be.visible')              
